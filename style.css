@@ -1,129 +1,179 @@
-body{
+*{
     margin: 0px;
     padding: 0px;
-    font-family: fantasy;
     box-sizing: border-box;
-    font-size: 5rem;
-    font-weight: bold;
-    background-color: rgb(19, 19, 39);
 }
-.time{
-    position: absolute;
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
     display: flex;
-    width: 65%;
-    max-width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
-    background-color: rgba(0, 119, 255,0.1);
-    box-shadow: 1px 1px 8px rgba(29, 221, 255, 0.5);
-    transition: 0.5s ease-in-out;
-}
-
-.time:hover{
-    background-color: rgba(0, 119, 255,0.3);
+    font-family: fantasy;
+    background-image : linear-gradient(45deg,#ff2828,#ff7b00);
 }
 
 .clock{
-    padding: 30px 25px;
-    letter-spacing: 0.5rem;
-    background : linear-gradient(255deg, rgba(0, 4, 255, 0.1), rgba(211, 211, 211,0.1));
-    box-shadow: 1px 1px 8px rgba(20, 218, 253, 0.5);
-    border: none;
-    overflow: hidden;
-    color: white;
-    text-shadow:4px 4px 6px rgba(255, 255, 255, 0.4);
+position: relative;
+width: 500px;
+height: 500px;
+overflow: hidden;
+border: 2px solid rgba(0, 0, 0,0.5);
+border-radius: 250px; 
+background-color: rgba(255, 0, 0, 0.4);
+box-shadow: 6px 2px 20px black;
 }
 
-.other{
-    padding: 0px 5px;
-    overflow: hidden;
-    color: white;
-    text-shadow:4px 4px 4px rgba(110, 226, 255, 0.4);
-}
-
-.days{
+.clock::after{
+    content: "";
     position: absolute;
-    display: flex;
-    width: 65%;
-    max-width: 100%;
-    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,rgba(255, 17, 17, 0.4),rgba(146, 97, 97, 0.3),50%);
+}
+
+.clock::before{
+    content: "";
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    align-items: center;
-    justify-content: center;
-    margin-top: 120px;
-    color : rgba(241, 241, 241,0.4);
-    bottom : 120px;
-    font-size: 1rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
 }
 
-.days p{
-    padding : 0px 20px;
+.num{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1.4rem;
+} 
+
+.num::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 2px;
+    height: 15px;
+    background-color: black;
 }
 
-@media all and (max-width : 600px){
-    .time{
-        position: absolute;
-        display: flex;
-        width: 80%;
-        max-width: 100%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        align-items: center;
-        justify-content: center;
-        border-radius: 10px;
-        background-color: rgba(0, 119, 255,0.1);
-        box-shadow: 1px 1px 8px rgba(29, 221, 255, 0.5);
-        transition: 0.5s ease-in-out;
-    }
+.num1{
+    transform: rotate(30deg);
+}
+.num1 div{
+    transform: rotate(-30deg);
+}
+.num2{
+    transform: rotate(60deg);
+}
+.num2 div{
+    transform: rotate(-60deg);
+}
+.num3{
+    transform: rotate(90deg);
+}
+.num3 div{
+    transform: rotate(-90deg);
+}
+.num4{
+    transform: rotate(120deg);
+}
+.num4 div{
+    transform: rotate(-120deg);
+}
+.num5{
+    transform: rotate(150deg);
+}
+.num5 div{
+    transform: rotate(-150deg);
+}
+.num6{
+    transform: rotate(180deg);
+}
+.num6 div{
+    transform: rotate(-180deg);
+}
+.num7{
+    transform: rotate(210deg);
+}
+.num7 div{
+    transform: rotate(-210deg);
+}
+.num8{
+    transform: rotate(240deg);
+}
+.num8 div{
+    transform: rotate(-240deg);
+}
+.num9{
+    transform: rotate(270deg);
+}
+.num9 div{
+    transform: rotate(-270deg);
+}
+.num10{
+    transform: rotate(300deg);
+}
+.num10 div{
+    transform: rotate(-300deg);
+}
+.num11{
+    transform: rotate(330deg);
+}
+.num11 div{
+    transform: rotate(-330deg);
+}
+.num12{
+    transform: rotate(360deg);
+}
+.num12 div{
+    transform: rotate(-360deg);
+}
 
-    .clock{
-        margin: 0px 10px;
-        padding: 10px 15px;
-        font-size: 15px;
-        letter-spacing: 0.5rem;
-        background : linear-gradient(255deg, rgba(0, 4, 255, 0.1), rgba(211, 211, 211,0.1));
-        box-shadow: 1px 1px 8px rgba(20, 218, 253, 0.5);
-        border: none;
-        overflow: hidden;
-        color: rgb(255, 255, 255);
-        text-shadow:4px 4px 6px rgba(255, 255, 255, 0.4);
-    }
-    
-    .other{
-        padding: 0px 5px;
-        font-size: 15px;
-        overflow: hidden;
-        color: white;
-        text-shadow:4px 4px 4px rgba(110, 226, 255, 0.4);
-    }
-    .days{
-        position: absolute;
-        display: flex;
-        width: 100%;
-        max-width: 100%;
-        overflow: hidden;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        align-items: center;
-        justify-content: center;
-        margin-top: 40px;
-        margin-left: 2px;
-        color : rgba(241, 241, 241,0.4);
-        bottom : 20px;
-        font-size: 10px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    }
-    
-    .days p{
-        padding : 0px 10px;
-    }
+.hand{
+    position: absolute;
+    top : 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.hand div{
+    position: absolute;
+    top : 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(0, 0, 0);
+}
+.sec{
+    position: absolute;
+    margin: 45px 0px;
+    width: 1px;
+    height: 50%;
+}
+.min{
+    position: absolute;
+    margin: 40px 0px;
+    width: 3px;
+    height: 50%;
+    border-radius: 5%;
+}
+.hour{
+    position: absolute;
+    margin: 70px 0px;
+    width: 5px;
+    height: 35%;
+    border-radius: 5%;
 }

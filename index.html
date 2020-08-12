@@ -1,79 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clock</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="name">
-        <h1>To do <span style="color: rgb(0, 136, 255);font-size: 40px;">List</span></h1>
+  <div class="clock">
+    <!-- Numbers starts here -->
+    <div class="num num1">
+      <div>1</div>
     </div>
-    <div class="main">
-        <input type="text" class="input">
-        <button class="btn">+</button>
+    <div class="num num2">
+      <div>2</div>
     </div>
-    <div class="section2">
-        <div class="container">
-        </div>
+    <div class="num num3">
+      <div>3</div>
     </div>
-    
+    <div class="num num4">
+      <div>4</div>
+    </div>
+    <div class="num num5">
+      <div>5</div>
+    </div>
+    <div class="num num6">
+      <div>6</div>
+    </div>
+    <div class="num num7">
+      <div>7</div>
+    </div>
+    <div class="num num8">
+      <div>8</div>
+    </div>
+    <div class="num num9">
+      <div>9</div>
+    </div>
+    <div class="num num10">
+      <div>10</div>
+    </div>
+    <div class="num num11">
+      <div>11</div>
+    </div>
+    <div class="num num12">
+      <div>12</div>
+    </div>
+    <!-- Numbers ends here -->
 
-    <script>
-        const addbutton = document.querySelector(".btn");
-        const container = document.querySelector('.container');
-        const input = document.querySelector('.input');
-
-    class check{
-        constructor(notes){
-            this.createnote(notes);
-        }
-   
-
-        createnote(notes){
-            let box = document.createElement("div");
-            box.classList.add("container");
-
-            let input = document.createElement("input");
-            input.value = notes;
-            input.disabled = true;
-            input.classList.add("notes")
-
-            let inbutton = document.createElement("button");
-            inbutton.innerHTML = "Edit";
-            inbutton.classList.add("button")
-
-            let rebutton = document.createElement("button");
-            rebutton.innerHTML= "Delete"
-            rebutton.classList.add("button")
-
-            container.appendChild(box);
-            box.appendChild(input);
-            box.appendChild(inbutton);
-            box.appendChild(rebutton);
-
-            inbutton.addEventListener("click",function(){
-                input.disabled = !input.disabled;
-            })
-
-            rebutton.addEventListener("click",function(notes){
-                container.removeChild(box);
-            })
-        }
-    }
-        function play(){
-          if (input.value != ""){
-              new check(input.value);
-              input.value = "";
-          }
-        }     
-        addbutton.addEventListener("click",play);
-        window.addEventListener("keydown",(e) => {
-            if(e.which == 13){
-                play();
-            }
-        })
-    </script>
+    <!-- Hands starts here -->
+    <div class="hand" id="sec">
+      <div class="sec"></div>
+    </div>
+    <div class="hand" id="min">
+      <div class="min"></div>
+    </div>
+    <div class="hand" id="hour">
+      <div class="hour"></div>
+    </div>
+    <!-- Hands ends here -->
+  </div>
+  <script type="text/javascript" src="app.js"></script>
 </body>
 </html>
