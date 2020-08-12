@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="name">
+        <h1>To do <span style="color: rgb(0, 136, 255);font-size: 40px;">List</span></h1>
+    </div>
+    <div class="main">
+        <input type="text" class="input">
+        <button class="btn">+</button>
+    </div>
+    <div class="section2">
+        <div class="container">
+        </div>
+    </div>
+    
+
+    <script>
+        const addbutton = document.querySelector(".btn");
+        const container = document.querySelector('.container');
+        const input = document.querySelector('.input');
+
+    class check{
+        constructor(notes){
+            this.createnote(notes);
+        }
+   
+
+        createnote(notes){
+            let box = document.createElement("div");
+            box.classList.add("container");
+
+            let input = document.createElement("input");
+            input.value = notes;
+            input.disabled = true;
+            input.classList.add("notes")
+
+            let inbutton = document.createElement("button");
+            inbutton.innerHTML = "Edit";
+            inbutton.classList.add("button")
+
+            let rebutton = document.createElement("button");
+            rebutton.innerHTML= "Delete"
+            rebutton.classList.add("button")
+
+            container.appendChild(box);
+            box.appendChild(input);
+            box.appendChild(inbutton);
+            box.appendChild(rebutton);
+
+            inbutton.addEventListener("click",function(){
+                input.disabled = !input.disabled;
+            })
+
+            rebutton.addEventListener("click",function(notes){
+                container.removeChild(box);
+            })
+        }
+    }
+        function play(){
+          if (input.value != ""){
+              new check(input.value);
+              input.value = "";
+          }
+        }     
+        addbutton.addEventListener("click",play);
+        window.addEventListener("keydown",(e) => {
+            if(e.which == 13){
+                play();
+            }
+        })
+    </script>
+</body>
+</html>
