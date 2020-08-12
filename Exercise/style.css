@@ -1,0 +1,96 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 25px;
+    font-family: cursive;
+    background: url(to-do.jpg) center center fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.name {
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+.name h1{
+    text-align: center;
+    font-size: 40px;
+    
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.input{
+    height: 50px;
+    outline: none;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 4px white;
+    width: 450px;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+    background-color: rgba(255, 0, 0,0.5);
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px black;
+}
+
+.btn{ 
+    outline: none;
+    color: rgb(255, 251, 0);
+    text-shadow: 4px 4px 2px 4px yellow;
+    border: none;
+    margin: 15px;
+    padding: 12px 15px;
+    background-color: rgb(255, 101, 101);
+    border-radius: 50%;
+    box-shadow: 1px 1px 8px black;
+}
+.btn:hover{
+    transition: 0.5s;
+    box-shadow: 1px 1px 12px  rgb(229, 255, 0);
+    
+
+}
+.section2{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container{
+    margin-top: 5px;
+}
+
+.notes{
+    height: 100%;
+    color: white;
+    text-shadow:2px 2px 2px black;
+    outline: none;
+    width: 450px;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 0.5rem 1rem;
+}
+
+.button{ 
+    outline: none;
+    color: white;
+    text-shadow:2px 2px 2px black;
+    border: none;
+    background: none;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    
+    
+}
+.button:hover{
+    transition: 1s ease-in-out;
+    box-shadow: 1px 1px 8px rgb(255, 238, 0);
+}
