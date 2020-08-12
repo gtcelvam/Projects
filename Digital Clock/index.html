@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="time">
+        <p class="clock" id="hour" ></p>
+        <p class="other">:</p>
+        <p class="clock" id="min" ></p>
+        <p class="other">:</p>
+        <p class="clock" id="sec" ></p>
+        </br>
+        <p class="other" id="session" ></p>
+        <script> 
+            function timenow(){
+            var date = new Date();
+            var h = date.getHours();
+            var m = date.getMinutes();
+            var s = date.getSeconds();
+            var session = "AM"
+            if(h==0){
+                h=12;
+            }
+            else if(h>12){
+                h = h-12;
+                session = "PM"
+            }
+            h = (h<10) ? "0"+h : h;
+            m = (m<10) ? "0"+m : m;
+            s = (s<10) ? "0"+s : s;
+            document.getElementById("hour").innerHTML = h;
+            document.getElementById("min").innerHTML = m;
+            document.getElementById("sec").innerHTML = s;
+            document.getElementById("session").innerHTML = session;
+            document.getElementById("hour").textContent = h;
+            document.getElementById("min").textContent = m;
+            document.getElementById("sec").textContent = s;
+            document.getElementById("session").textContent = session;
+            setTimeout(timenow,1000);
+            
+            }
+            timenow();
+        </script>
+    </div>
+    <div class="days">
+        <p id="Sunday">Sunday</p>
+        <p id="Monday">Monday</p>
+        <p id="Tuesday">Tuesday</p>
+        <p id="Wednesday">Wednesday</p>
+        <p id="Thursday">Thursday</p>
+        <p id="Friday">Friday</p>
+        <p id="Saturday">Saturday</p>
+
+       <script>
+           function todayday(){
+           var day = new Date();
+           var today = day.getDay();
+           if (today == 0){
+            document.getElementById("Sunday").style.color="rgba(241, 241, 241,1)";
+            document.getElementById("Sunday").style.textShadow = "2px -2px 6px rgba(110, 226, 255, 0.6)";
+           }
+           else if(today==1){
+            document.getElementById("Monday").style.color="rgba(241, 241, 241,1)";
+            document.getElementById("Monday").style.textShadow = "2px -2px 6px rgba(110, 226, 255, 0.6)";
+           }
+           else if(today==2){
+            document.getElementById("Tuesday").style.color="rgba(241, 241, 241,1)";
+            document.getElementById("Tuesday").style.textShadow = "2px -2px 6px rgba(110, 226, 255, 0.6)";
+           }
+           else if(today==3){
+            document.getElementById("Wednesday").style.color="rgba(241, 241, 241,1)";
+            document.getElementById("Wednesday").style.textShadow = "2px -2px 6px rgba(110, 226, 255, 0.6)"
+           }
+           else if(today==4){
+            document.getElementById("Thursday").style.color="rgba(241, 241, 241,1)";
+            document.getElementById("Thursday").style.textShadow = "2px -2px 6px rgba(110, 226, 255, 0.6)";
+           }
+           else if(today==5){
+            document.getElementById("Friday").style.color="rgba(241, 241, 241,1)";
+            document.getElementById("Friday").style.textShadow = "2px -2px 6px rgba(110, 226, 255, 0.6)";
+           }
+           else if(today==6){
+            document.getElementById("Saturday").style.color="rgba(241, 241, 241,1)";
+            document.getElementById("Saturday").style.textShadow = "2px -2px 6px rgba(110, 226, 255, 0.6)";
+           }
+           }
+           todayday();
+       </script>
+    </div>
+</body>
+</html>

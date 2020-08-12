@@ -1,0 +1,129 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: fantasy;
+    box-sizing: border-box;
+    font-size: 5rem;
+    font-weight: bold;
+    background-color: rgb(19, 19, 39);
+}
+.time{
+    position: absolute;
+    display: flex;
+    width: 65%;
+    max-width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: rgba(0, 119, 255,0.1);
+    box-shadow: 1px 1px 8px rgba(29, 221, 255, 0.5);
+    transition: 0.5s ease-in-out;
+}
+
+.time:hover{
+    background-color: rgba(0, 119, 255,0.3);
+}
+
+.clock{
+    padding: 30px 25px;
+    letter-spacing: 0.5rem;
+    background : linear-gradient(255deg, rgba(0, 4, 255, 0.1), rgba(211, 211, 211,0.1));
+    box-shadow: 1px 1px 8px rgba(20, 218, 253, 0.5);
+    border: none;
+    overflow: hidden;
+    color: white;
+    text-shadow:4px 4px 6px rgba(255, 255, 255, 0.4);
+}
+
+.other{
+    padding: 0px 5px;
+    overflow: hidden;
+    color: white;
+    text-shadow:4px 4px 4px rgba(110, 226, 255, 0.4);
+}
+
+.days{
+    position: absolute;
+    display: flex;
+    width: 65%;
+    max-width: 100%;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
+    color : rgba(241, 241, 241,0.4);
+    bottom : 120px;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.days p{
+    padding : 0px 20px;
+}
+
+@media all and (max-width : 600px){
+    .time{
+        position: absolute;
+        display: flex;
+        width: 80%;
+        max-width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        background-color: rgba(0, 119, 255,0.1);
+        box-shadow: 1px 1px 8px rgba(29, 221, 255, 0.5);
+        transition: 0.5s ease-in-out;
+    }
+
+    .clock{
+        margin: 0px 10px;
+        padding: 10px 15px;
+        font-size: 15px;
+        letter-spacing: 0.5rem;
+        background : linear-gradient(255deg, rgba(0, 4, 255, 0.1), rgba(211, 211, 211,0.1));
+        box-shadow: 1px 1px 8px rgba(20, 218, 253, 0.5);
+        border: none;
+        overflow: hidden;
+        color: rgb(255, 255, 255);
+        text-shadow:4px 4px 6px rgba(255, 255, 255, 0.4);
+    }
+    
+    .other{
+        padding: 0px 5px;
+        font-size: 15px;
+        overflow: hidden;
+        color: white;
+        text-shadow:4px 4px 4px rgba(110, 226, 255, 0.4);
+    }
+    .days{
+        position: absolute;
+        display: flex;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+        margin-left: 2px;
+        color : rgba(241, 241, 241,0.4);
+        bottom : 20px;
+        font-size: 10px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    .days p{
+        padding : 0px 10px;
+    }
+}
