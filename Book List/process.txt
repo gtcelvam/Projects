@@ -1,0 +1,38 @@
+Static
+DOMContentLoaded - addEventListner
+PreventDefault
+e.target
+el.classlist.contains()
+parentElement.parentElement.remove();
+container.insertBefore()
+localStorage.getitem
+localStorage.setitem
+books.push
+books.splice
+parentElement.previousElementSibling.textContent
+
+
+On Submitting the form, 
+creating an EVENT to preventdefault which will stop from submitting 
+getting the values of Title, Author and Isbn by using getElementById
+If Title or author or Isbn is empty will not allow go further
+Else, Class Book will take the Values of Title and Author and Isbn with the respective name inside the Class
+UI.addbooklist(book) fuction will be initiated
+Store.addbook(book) will be initiated 
+UI.clearfields fuction will be initiated
+
+Creating the UI class to Display, Add, Clear and Delete Books
+Inside the UI class,creating functions to 
+Display books added and 
+to addbooks when user submitting the book and
+also creating a function to clear input fields to remove the input field after submitting
+finally creating a function to deletebooks when user want to delete it from the list 
+
+Creating Store class to getbooks, addbooks and to removebooks
+getbooks to take the values from the input fields and it will be saved on new array
+addbooks to push values to the array which createdon getbooks function
+removebooks to remove the items on click based on the isbn field of the books
+
+Creating Event remove books
+To Delete books by click the button which will be initiated by UI.deletebooks
+And also it will be deleted from store by using Store.removebook function

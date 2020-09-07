@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>MY <span style="color : rgb(0, 132, 255)">BOOK</span> LIST</h1>
+    <form id="form-list" action="">
+        <label class="form" for="title">Book Title</label><br>
+        <input class="input" type="text" name="title" id="title"><br>
+        <label class="form" for="title">Author Name</label><br>
+        <input class="input" type="text" name="title" id="author"><br>
+        <label class="form" for="title">ISBN</label><br>
+        <input class="input" placeholder="978" type="number" name="title" id="isbn"><br>
+        <button type="submit" id="btn">Submit</button>
+    </form>
+    <table class="tbl" draggable="true">
+        <thead id="book-list">
+        <tr>
+            <th>Name</th>
+            <th>Author</th>
+            <th>ISBN</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody id="all-books"></tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>

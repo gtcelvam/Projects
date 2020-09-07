@@ -1,0 +1,77 @@
+*, ::after, ::before{
+    margin : 0px;
+    padding: 0px;
+    font-family: cursive;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 20px;
+}
+h1 span{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.tbl th{
+    border-radius: 5px;
+    padding: 0px 10px;
+    margin-left: 0px;
+    text-align: left;
+    background-color: rgb(146, 145, 136);
+}
+.tbl{
+    margin: auto;
+    background-color: cornflowerblue;
+    box-shadow: 4px 4px 10px black;
+    border-radius: 10px;
+    display: table;
+    color: black;
+    text-align: left;
+}
+
+.list{
+    color: white;
+}
+.tbl td{
+    padding: 10px 20px;
+    text-align: left;
+    font-size: 20px;
+    color: black;
+    border-bottom: 1px solid rgba(0, 0, 0,0.2);
+}
+#form-list{
+    /* border : 2px solid black; */
+    text-align: left;
+}
+.input{
+    width: 400px;
+}
+.form{
+    margin: 10px 0px;
+}
+
+#btn{
+    width: 400px;
+    margin: 20px 0px;
+    padding: 0px 15px;
+    border-radius: 5px;
+    color: white;
+    background-color: cornflowerblue;
+    border: 1px solid rgb(11, 137, 255);
+}
+#it{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 0, 0, 0.7);
+    border-radius: 100%;
+    text-shadow: 0px 0px 8px rgb(25, 0, 255);
+    border: 1px solid rgba(255, 0, 0,0.8);
+    font-size: 15px;
+    padding: 2px 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0,0.5);
+    
+}
