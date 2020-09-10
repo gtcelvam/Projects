@@ -1,179 +1,126 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
 body{
-    width: 100vw;
-    height: 100vh;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    background: url(https://cdn.pixabay.com/photo/2015/07/31/11/45/library-869061_960_720.jpg) 
+    no-repeat center center ;
+    background-size: cover;
+    min-height: 30rem;
+}
+
+nav{
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    background-color: #0005;
+}
+
+nav ul {
+    float: right;
+    margin: 0;
+    margin-right: 1.9rem;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+}
+
+img {
+    width: 5%;
+    margin: 0;
+    margin-left: 1.9rem;
+}
+
+nav ul li:hover{
+    background-color: rgba(73, 51, 43,0.5);
+    color: #000;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.section{
+    width: 80%;
+    border : 2px solid rgba(255, 0, 0,0.5);
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: fantasy;
-    background-image : linear-gradient(45deg,#ff2828,#ff7b00);
+    margin : auto;
+    margin-top: 2%;
+    padding: 10px;
+    text-align: justify;
 }
 
-.clock{
-position: relative;
-width: 500px;
-height: 500px;
-overflow: hidden;
-border: 2px solid rgba(0, 0, 0,0.5);
-border-radius: 250px; 
-background-color: rgba(255, 0, 0, 0.4);
-box-shadow: 6px 2px 20px black;
+.section h1{
+    color : white;
+    line-height: 40px;
 }
 
-.clock::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg,rgba(255, 17, 17, 0.4),rgba(146, 97, 97, 0.3),50%);
+.section p{
+    color: white;
 }
 
-.clock::before{
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 20px;
-    height: 20px;
-    background-color: black;
-    border-radius: 50%;
+.btn-1{
+   background-color: rgb(255, 0, 21);
+   padding: 10px 16px ; 
+   color: white;
+   border: none;
+   border-radius: 10px;
 }
 
-.num{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+.features {
+    margin-top: 4%;
+    margin-bottom: 2%;
+}
+
+.features button{
+    padding: 0.7rem 2rem;
+    margin-right: 2rem;
+    font-size: 14px;
+    border: none;
+    opacity: 0.9;
+}
+
+showcase h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 5%;
+    margin-bottom: 5%;
     text-align: center;
-    font-size: 2rem;
-    font-weight: 700;
-    padding: 1.4rem;
-} 
-
-.num::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%);
-    width: 2px;
-    height: 15px;
-    background-color: black;
 }
 
-.num1{
-    transform: rotate(30deg);
-}
-.num1 div{
-    transform: rotate(-30deg);
-}
-.num2{
-    transform: rotate(60deg);
-}
-.num2 div{
-    transform: rotate(-60deg);
-}
-.num3{
-    transform: rotate(90deg);
-}
-.num3 div{
-    transform: rotate(-90deg);
-}
-.num4{
-    transform: rotate(120deg);
-}
-.num4 div{
-    transform: rotate(-120deg);
-}
-.num5{
-    transform: rotate(150deg);
-}
-.num5 div{
-    transform: rotate(-150deg);
-}
-.num6{
-    transform: rotate(180deg);
-}
-.num6 div{
-    transform: rotate(-180deg);
-}
-.num7{
-    transform: rotate(210deg);
-}
-.num7 div{
-    transform: rotate(-210deg);
-}
-.num8{
-    transform: rotate(240deg);
-}
-.num8 div{
-    transform: rotate(-240deg);
-}
-.num9{
-    transform: rotate(270deg);
-}
-.num9 div{
-    transform: rotate(-270deg);
-}
-.num10{
-    transform: rotate(300deg);
-}
-.num10 div{
-    transform: rotate(-300deg);
-}
-.num11{
-    transform: rotate(330deg);
-}
-.num11 div{
-    transform: rotate(-330deg);
-}
-.num12{
-    transform: rotate(360deg);
-}
-.num12 div{
-    transform: rotate(-360deg);
+.courses{
+    display: flex;
+    text-align: center;
 }
 
-.hand{
-    position: absolute;
-    top : 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.courses img{
+    width : 250px;
+    border-radius: 5px;
+    border : 1px solid rgba(114, 109, 109, 0.5);
+    box-shadow: 2px 1px 10px rgba(0, 0, 0, 0.7) ;
 }
-.hand div{
-    position: absolute;
-    top : 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgb(0, 0, 0);
+
+.apply {
+    margin-top: 4%;
+    background-color: rgb(255, 0, 13);
+    padding: 0.7rem 1rem;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
 }
-.sec{
-    position: absolute;
-    margin: 45px 0px;
-    width: 1px;
-    height: 50%;
-}
-.min{
-    position: absolute;
-    margin: 40px 0px;
-    width: 3px;
-    height: 50%;
-    border-radius: 5%;
-}
-.hour{
-    position: absolute;
-    margin: 70px 0px;
-    width: 5px;
-    height: 35%;
-    border-radius: 5%;
+
+footer{
+    position: relative;
+    background-color: rgb(99, 99, 99);
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    margin-top: 4%;
 }
